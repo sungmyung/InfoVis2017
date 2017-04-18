@@ -26,21 +26,21 @@ Vec3.prototype.min = function()
     return min;
 }
 
-Vec3.prototype.mid = function()
-{
-    var mid = this.x;
-    if(mid>=this.y)
-    {
-	if(mid>=this.z)
-    } else {
-
-    }
-}
-
 Vec3.prototype.max = function()
 {
     var max = this.x;
     if(max<=this.y) max = this.y;
     if(max<=this.z) max = this.z;
     return max;
+}
+
+Vec3.prototype.mid = function()
+{
+    var mid = this.x + this.y + this.z 
+    - max(this.x, this.y, this.z) - min(this.x, this.y, this.z);
+    return mid;
+}
+
+function AreaOfTriangle(v1, v2, v3) {
+
 }
